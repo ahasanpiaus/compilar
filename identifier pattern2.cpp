@@ -1,0 +1,45 @@
+
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int i,len,k,n;
+cout<<"String Number?"<<endl;
+cin>>n;
+ int a[n];
+ string s1;
+ cin.ignore(1,'\n');
+ for(k=0;k<n;k++)
+    {
+        int b=0;
+ cout<<"Enter The String:"<<endl;
+ getline(cin,s1);
+ len= s1.length();
+ for(i=0;i<len;i++)
+ {
+     if(s1[i]==' ')  { b=1;  break;
+     }
+     }
+     if(b==0)
+ {
+     if((s1[0]>='A' && s1[0]<='Z') || (s1[0]>='a' && s1[0]<='z') || s1[0]=='_')
+        {
+            a[k]=2;
+            }
+     else
+        a[k]=-1;
+     }
+     else
+        a[k]=-1;
+     }
+ for(i=0;i<n;i++)
+ {
+     if(a[i]==-1)
+ {
+     cout<<"Invalid"<<endl;
+     }
+     else
+        cout<<"Valid"<<endl;
+     }
+     }
+
